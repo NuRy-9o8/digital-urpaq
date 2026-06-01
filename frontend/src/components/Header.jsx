@@ -225,8 +225,8 @@ export const Header = () => {
               {labels.home}
             </NavLink>
             {menuGroups.map((group) => (
-              <div key={group.title} className="rounded-3xl border border-slate-200 bg-slate-50 p-3">
-                <div className="text-sm font-semibold text-slate-700 mb-2">{group.title}</div>
+              <div key={group.title} className="w-full max-w-full rounded-3xl border border-slate-200 bg-gradient-to-br from-slate-50 to-slate-100 p-4 shadow-sm">
+                <div className="mb-3 text-sm font-semibold uppercase tracking-[0.12em] text-slate-500">{group.title}</div>
                 <div className="grid gap-2">
                   {group.items.map((item) => {
                     if (item.auth && !isAuthenticated) return null;
@@ -238,7 +238,7 @@ export const Header = () => {
                         key={item.to}
                         to={item.to}
                         onClick={closeMenu}
-                        className="rounded-xl px-4 py-3 text-base font-semibold text-slate-700 hover:bg-white"
+                        className="block w-full rounded-3xl border border-slate-200 bg-white px-4 py-3 text-base font-semibold text-slate-700 transition hover:border-primary hover:bg-slate-50"
                       >
                         {item.label}
                       </Link>

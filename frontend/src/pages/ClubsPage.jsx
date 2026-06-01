@@ -85,12 +85,12 @@ export const ClubsPage = () => {
               <div className="flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.14em] text-primary">
                 <Filter size={17} /> Фильтры
               </div>
-              <div className="mt-5 flex gap-2 overflow-x-auto pb-2 lg:grid lg:overflow-visible lg:pb-0">
+              <div className="mt-5 grid grid-cols-2 gap-2 lg:grid-cols-1">
                 {groups.map((group) => (
                   <button
                     key={group}
                     onClick={() => setDirection(group)}
-                    className={`min-h-11 shrink-0 rounded-xl px-4 text-left text-sm font-semibold transition ${
+                    className={`w-full min-h-11 rounded-xl px-4 text-left text-sm font-semibold transition ${
                       direction === group ? 'bg-primary text-white' : 'bg-slate-50 text-slate-700 hover:bg-slate-100'
                     }`}
                   >
