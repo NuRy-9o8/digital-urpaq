@@ -1,0 +1,34 @@
+version: '3.8'
+
+services:
+  backend:
+    build: ./backend
+    ports:
+      - "5000:5000"
+    environment:
+      - PORT=5000
+      - DATABASE_PATH=/data/database.db
+      - JWT_SECRET=your_jwt_secret_key_change_in_production
+      - NODE_ENV=production
+      - CLIENT_URL=http://localhost:3000
+    volumes:
+      - ./backend/data:/data
+    networks:
+      - digital-urpaq
+    restart: unless-stopped
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "3000:3000"
+    environment:
+      - VITE_API_URL=http://localhost:5000/api
+    networks:
+      - digital-urpaq
+    depends_on:
+      - backend
+    restart: unless-stopped
+
+networks:
+  digital-urpaq:
+    driver: bridge

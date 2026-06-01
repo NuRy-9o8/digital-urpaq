@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" viewBox="0 0 192 192" role="img" aria-label="Digital Urpaq">
+  <rect width="192" height="192" rx="44" fill="#3b3eac"/>
+  <circle cx="142" cy="48" r="20" fill="#f7c00b"/>
+  <path d="M42 56h48c36 0 60 22 60 54s-24 54-60 54H42V56Zm32 29v50h16c18 0 29-10 29-25s-11-25-29-25H74Z" fill="#fff"/>
+</svg>
