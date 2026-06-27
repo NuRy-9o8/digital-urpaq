@@ -185,12 +185,5 @@ SQLite таблицы:
 
 ## 👥 Авторы
 
-Digital Urpaq Development Team
+Dark Trio
 
-## 📝 Лицензия
-
-MIT
-
-## 📞 Поддержка
-
-Для вопросов и предложений обратитесь к администрации Digital Urpaq.
